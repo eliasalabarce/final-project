@@ -1,0 +1,126 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Rasa:wght@300;500&display=swap');
+@import url('style.css');
+
+main section:first-child article>div {
+	overflow: hidden;
+	transform: rotate(45deg);
+	margin: calc(var(--space)*5);
+	transition: transform 1s;
+}
+
+main section:first-child article h3 {
+	font-size: var(--linkSize);
+	margin-bottom: 5px;
+}
+
+main section:first-child article p {
+	color: var(--secondColor);
+}
+
+main section:first-child article>div img {
+	transform: rotate(-45deg) scale(1.5);
+	transition: 0s;
+}
+
+main section:first-child article>div:hover {
+	transform: rotate(-90deg) scale(1.5);
+}
+
+main section:first-child article>div img:hover {
+	transform: rotate(90deg) scale(1.5);
+}
+
+main section:first-child .container>p {
+	text-align: center;
+	font-size: var(--linkSize);
+	padding: calc(var(--space)*5) var(--space);
+	background-color: #FAFAFA;
+}
+
+main section:first-child .container>p a {
+	text-decoration: none;
+	border-bottom: 1px solid var(--secondColor);
+	color: var(--mainColor);
+}
+
+main section:nth-child(3) article {
+	display: none;
+}
+
+main section:nth-child(3) article:first-child {
+	display: block;
+}
+
+main section:nth-child(3) #submenu {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+main section:nth-child(3) #submenu li {
+	padding: calc(var(--space)/2);
+	margin-bottom: var(--space);
+	font-size: var(--linkSize);
+	color: var(--secondColor);
+	text-align: center;
+	cursor: pointer;
+}
+
+main section:nth-child(3) #submenu li:hover {
+	color: var(--mainColor);
+}
+
+main section:nth-child(3) #submenu .active {
+	border-bottom: 3px solid var(--mainColor);
+	color: var(--mainColor);
+}
+
+main section:nth-child(3) article p {
+	font-size: var(--linkSize);
+}
+main section:nth-child(3) article h3 {
+	font-size: calc(var(--titleSize)/1.5);
+	margin-bottom: var(--space);
+}
+
+@media(min-width: 600px)
+{
+	main section:first-child article>div {
+    	margin: 0px;
+    	width: 155px;
+    }
+	main section:first-child .container>div {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		grid-row-gap: calc(var(--space)*3);
+		padding: calc(var(--space)*2) 0px;
+	}
+
+	main section:first-child .container>div h3 {
+		margin-top: 50px;
+	}
+
+	main section:first-child .container>div h3, main section:first-child .container>div p {
+		text-align: center;
+	}
+
+	main section:nth-child(3) article h3 {
+    	display: none;
+    }
+
+}
+
+@media(min-width: 700px)
+{
+	main section:first-child .container>div {
+		grid-template-columns: repeat(3, 1fr);
+	}	
+}
+
+@media(min-width: 900px)
+{
+	main section:first-child .container>div {
+		grid-template-columns: repeat(4, 1fr);
+	}	
+}

@@ -1,0 +1,164 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Rasa:wght@300;500&display=swap');
+@import url('style.css');
+
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+	background-image: url("../images/fondo.png");
+	background-size: cover;
+}
+
+.hero h1 {
+	line-height: 1.4em;
+	font-size: var(--titleSize);
+	text-align: center;
+}
+
+main section .container > p a {
+	text-decoration: none;
+	display: inline-block;
+	padding: calc(var(--space)*3) 0px 2px 0px;
+	border-bottom: 1px solid var(--secondColor);
+	color: var(--secondColor);
+	font-size: var(--linkSize);
+	
+} 
+
+main section:first-child .container>div {
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-gap: var(--space);
+}
+
+main section:first-child .container>div article:last-child {
+	position: relative;
+	grid-row: 3/5;
+	overflow: hidden;
+}
+
+main section:first-child .container>div article:last-child img {
+	position: absolute;
+	top: 25%;
+	transform: scale(2.1);
+}
+
+main section:nth-child(3) .container h2 {
+	margin-bottom: 0px;
+}
+
+main section:nth-child(3) .container>div h3 {
+	padding: calc(var(--space)*4) 0px 0px 0px;
+	font-size: calc(var(--titleSize)/1.5);
+	
+}
+
+main section:nth-child(3) .container>div article > p {
+	font-size: var(--titleSize);
+	font-weight: 300;
+	padding: var(--space) 0px;
+	border-bottom: 1px solid var(--colorBuy);
+}
+
+main section:nth-child(3) .container>div article ul {
+	padding: var(--space) 0px 0px 0px;
+}
+
+main section:nth-child(3) .container>div ul li {
+	font-size: var(--linkSize);
+	line-height: 1.4em;
+}
+
+main section:nth-child(3) .container>div ul li span {
+	padding: 0px calc(var(--space)/2);
+	color: var(--secondColor);
+}
+
+main section:nth-child(3) .container>div article a {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--mainColor);
+	padding: 15px 30px;
+	margin-top: var(--space);
+	background-color: var(--colorBuy);
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+main section:nth-child(4) .container>div article {
+	height: 92%;
+	overflow: hidden;
+}
+
+main section:nth-child(4) .container>div article p {
+	color: var(--secondColor);
+}
+
+main section:nth-child(4) .container>div article h3 {
+	font-size: calc(var(--titleSize)/1.5);
+}
+
+main section:nth-child(4) .container>div article:first-child {
+	margin-bottom: 30px;
+}
+
+main>div .container {
+	padding: 0px var(--space);
+}
+
+main>div p {
+	font-size: calc(var(--linkSize)*0.9);
+	color: var(--mainColor);
+	line-height: 1.3;
+}
+
+main>div p a {
+	color: var(--mainColor);
+	text-decoration: none;
+	border-bottom: 1px solid var(--secondColor);
+}
+
+@media(min-width: 600px)
+{
+    .hero h1 {
+	    max-width: 700px;
+    }
+
+    main section:first-child .container>div {
+    	grid-template-rows: 1fr 1fr;
+    	grid-template-columns: 1fr 1fr;
+    }
+
+    main section:first-child .container>div article:last-child {
+    	grid-column: 2;
+    	grid-row: 1/3;
+    }
+
+    main section:nth-child(3) .container>div {
+    	display: grid;
+    	grid-template-columns: repeat(3, 1fr);
+    	grid-gap: var(--space);
+    }
+
+    main section:nth-child(4) .container>div {
+    	display: grid;
+    	grid-template-columns: repeat(2, 1fr);
+    	grid-template-rows: 1fr;
+        grid-gap: var(--space);
+    }
+
+    main section:nth-child(4) .container>div article:first-child {
+	    margin-bottom: 0px;
+    }
+
+    main section:nth-child(4) .container>p a {
+	    padding-top: var(--space);
+    }
+
+    main>div p {
+	    width: 50%;
+    }
+
+}
